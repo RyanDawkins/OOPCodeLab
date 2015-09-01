@@ -25,4 +25,4 @@ c.model = "Civic";
 c.price = 15000;
 ```
 
-That's pretty simple! Let's apply this!
+That's pretty simple! Let's apply this! Make your [first class](firstclass.md)
