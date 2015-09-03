@@ -80,12 +80,12 @@ And an even bigger problem!!!!! Programmers have found out that they don't have 
 
 First let's open CarTakeOver.java
 
-First thing we need to do is prevent other programmers from directly accessing and modifying price! So let's change ```public double price``` to ```private double price```. This will prevent anyone outside of the class from using price, but will allow our class to use it still!
+First thing we need to do is prevent other programmers from directly accessing and modifying price! So let's change ```public double price``` to ```private double price```. This will prevent anyone outside of the class from using price, but will allow our class to use it still! It's also best practice to do this to the remaining variables in case something like this happens. So let's do that also, but don't focus on them.
 
 ```java
 public class Car {
-  public String make;
-  public String model;
+  private String make;
+  private String model;
   private double price; // In USD
 
   // 1 KDW = 10 USD
@@ -111,6 +111,15 @@ public class Car {
   public void setEUPrice(double price) {
     this.price = price * EURO_TO_USD_CONVERSION_RATE;
   }
+
+  /** Ignore this code it's here for completeness **/
+  public void setMake(String make) { this.make = make; }
+  public String getMake() { return this.make; }
+
+  /** Ignore this code it's here for completeness **/
+  public void setModel(String model) { this.model = model; }
+  public String getModel() { return this.model; }
+
 }
 ```
 
@@ -118,8 +127,8 @@ Now we need to internally change our price to be stored in KWD!
 
 ```java
 public class Car {
-  public String make;
-  public String model;
+  private String make;
+  private String model;
   private double price; // In USD
 
   // 1 KDW = 10 USD
@@ -145,6 +154,14 @@ public class Car {
   public void setEUPrice(double price) {
     this.price = price * KWD_TO_EURO;
   }
+
+  /** Ignore this code it's here for completeness **/
+  public void setMake(String make) { this.make = make; }
+  public String getMake() { return this.make; }
+
+  /** Ignore this code it's here for completeness **/
+  public void setModel(String model) { this.model = model; }
+  public String getModel() { return this.model; }
 }
 ```
 
@@ -152,8 +169,8 @@ Now let's add in two remaining methods to get/set in KWD!
 
 ```java
 public class Car {
-  public String make;
-  public String model;
+  private String make;
+  private String model;
   private double price; // In USD
 
   // 1 KDW = 10 USD
@@ -188,5 +205,15 @@ public class Car {
     this.price = price;
   }
 
+  /** Ignore this code it's here for completeness **/
+  public void setMake(String make) { this.make = make; }
+  public String getMake() { return this.make; }
+
+  /** Ignore this code it's here for completeness **/
+  public void setModel(String model) { this.model = model; }
+  public String getModel() { return this.model; }
+
 }
 ```
+
+If you went through all of this and just wanted something more you can move forward with [Concerning Hobbits](hobbits.md)
