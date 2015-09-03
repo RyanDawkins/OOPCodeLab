@@ -25,7 +25,7 @@ In this example, when we update the value of `a` after it is assigned to be, the
 
 This is not the case when using object instances. In the example we make two instances of the `Car` class, one called `x` and one called `y`. What happens when we assign `x` the value of `y`?
 
-From the above example we would expect the values of `y` to be coppied into `x`. 
+From the above example we would expect the values of `y` to be coppied into `x`.
 
 ````java
 // pass by reference illustration
@@ -47,3 +47,5 @@ System.out.println(x);
 ````
 
 The last print statement actually prints `Make:  Bugatti Model: Veyron Price: $0.0`. If objects were passed by value, we would expect it to print `Make:  Make Model: Model Price: $0.0`. So why the difference? In Java, objects are passed by reference. This mean that `x` now refers to `y`. So when changes are made to `y`, they are reflected in `x` because it simple points to the values of `y`.
+
+[Next: Encapsulation](encapsulation.md)

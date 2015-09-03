@@ -7,7 +7,7 @@ Well there is a way! One quality that almost every programmer has is that we are
 A class is a way to group together variables and methods that are related to each other. This allows programmers to create their own "types" instead of having to have multiple variables declared when really just wanting to write code about a car.
 
 What does this look like?
-```Java
+```java
 public class Car {
   public String make;
   public String model;
@@ -18,7 +18,7 @@ public class Car {
 After creating or defining this Car class we can create _instances_ of cars that have all of these properties.
 
 This is how you use it:
-```Java
+```java
 Car c = new Car();
 c.make = "Honda";
 c.model = "Civic";
